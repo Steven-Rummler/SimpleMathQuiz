@@ -1,5 +1,24 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        width: 100%;
+        text-align: center;
+        margin: 0px;
+      }
+      .check {
+        cursor: pointer;
+      }
+      .factor {
+        width: 5em;
+      }
+      #start {
+        cursor: pointer;
+      }
+    </style>
+  </head>
   <body>
     <h2>Simple Math Quiz Builder</h2>
 
@@ -9,19 +28,26 @@
       method="GET"
       onsubmit="return validateForm()"
     >
-      <input type="checkbox" id="add" name="add" checked />
+      <input type="checkbox" class="check" id="add" name="add" checked />
       <label for="add">Add</label>
-      <input type="checkbox" id="subtract" name="subtract" />
+      <input type="checkbox" class="check" id="subtract" name="subtract" />
       <label for="subtract">Subtract</label>
-      <input type="checkbox" id="multiply" name="multiply" />
+      <input type="checkbox" class="check" id="multiply" name="multiply" />
       <label for="multiply">Multiply</label>
-      <input type="checkbox" id="divide" name="divide" />
+      <input type="checkbox" class="check" id="divide" name="divide" />
       <label for="divide">Divide</label>
-      <br />
+      <br /><br />
       <label for="min">Factor range:</label>
-      <input type="number" id="min" name="min" value="0" /> to
-      <input type="number" id="max" name="max" value="9" /><br />
-      <input type="submit" value="Start" />
+      <input type="number" class="factor" id="min" name="min" value="0" />
+      to
+      <input
+        type="number"
+        class="factor"
+        id="max"
+        name="max"
+        value="9"
+      /><br /><br />
+      <input type="submit" id="start" value="Start" />
     </form>
     <br />
     <a id="github" href="https://github.com/Steven-Rummler/SimpleMathQuiz"
